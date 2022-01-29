@@ -1,6 +1,6 @@
 const Player = require('../lib/Manager.js');
 
-test('creates a player object', () => {
+test('creates a Manager object', () => {
     const Manager = new Manager('Dave');
   
     expect(manager.name).toBe('Dave');
