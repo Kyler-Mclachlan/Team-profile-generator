@@ -1,6 +1,7 @@
 const isolatingEngineers = staffData => {
-    engineerArray = staffData.filter(staffData.hasOwnProperty(github));
+    engineerArray = Object.values(staffData).filter(engineer => staffData.github = "string");
     console.log(engineerArray);
+    console.log(staffData.hasOwnProperty(staffData.github));
 }
 
 const managerDiv = (staffData) => {
