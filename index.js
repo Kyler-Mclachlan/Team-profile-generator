@@ -10,10 +10,10 @@ function userInput(){
     return inquirer.prompt([
       {
         type: 'input',
-        name: 'managerName',
+        name: 'name',
         message: "Please enter the team manager's name.",
-        validate: managerNameInput => {
-          if (managerNameInput) {
+        validate: nameInput => {
+          if (nameInput) {
             return true;
           } else {
             console.log("Please enter your team manager's name!")
@@ -23,10 +23,10 @@ function userInput(){
       },
       {
         type: 'input',
-        name: 'managerId',
+        name: 'id',
         message: "Please enter the manager's ID",
-        validate: managerIdInput => {
-          if (managerIdInput) {
+        validate: idInput => {
+          if (idInput) {
             return true;
           } else {
             console.log("Please enter the manager's ID!"
@@ -37,10 +37,10 @@ function userInput(){
       },
       {
         type: 'input',
-        name: 'managerEmailAddress',
+        name: 'email',
         message: "Please enter your manager's email address.",
-        validate: managerEmailAddressInput => {
-          if (managerEmailAddressInput) {
+        validate: emailInput => {
+          if (emailInput) {
             return true;
           } else {
             console.log("Please enter your manager's email address!")
@@ -50,10 +50,10 @@ function userInput(){
       },
       {
         type: 'input',
-        name: 'managerOfficeNumber',
+        name: 'officeNumber',
         message: "Please enter your manager's office number.",
-        validate: managerOfficeNumberInput => {
-          if (managerOfficeNumberInput) {
+        validate: officeNumberInput => {
+          if (officeNumberInput) {
             return true;
           } else {
             console.log("Please enter your manager's office number!")
@@ -61,21 +61,11 @@ function userInput(){
           }
         }
       },
+    ])  
+      .then
 
-    //   {
-    //     type: 'input',
-    //     name: 'github',
-    //     message: 'Please provide your github user name:',
-    //     validate: githubInput => {
-    //       if (githubInput) {
-    //         return true;
-    //       } else {
-    //         console.log('Please enter your github username!')
-    //         return false;
-    //       }
-    //     }
-    //   },
-    ])   
+
+    
   };
 
 userInput.prototype.mainMenu = function() {
@@ -91,3 +81,19 @@ userInput.prototype.mainMenu = function() {
   };
 
   userInput();
+
+
+  // engineer prompt
+      //   {
+    //     type: 'input',
+    //     name: 'github',
+    //     message: 'Please provide your github user name:',
+    //     validate: githubInput => {
+    //       if (githubInput) {
+    //         return true;
+    //       } else {
+    //         console.log('Please enter your github username!')
+    //         return false;
+    //       }
+    //     }
+    //   },
