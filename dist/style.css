@@ -1,0 +1,11 @@
+#grad {
+    background-image: linear-gradient(to right, rgb(230, 182, 173) , rgb(139, 0, 0));
+  }
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 16px;
+    margin: 0 16px;
+    height: 44vw;
+}

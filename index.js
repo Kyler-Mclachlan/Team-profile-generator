@@ -1,6 +1,12 @@
 // importing required packages and files
+
+// packages from local and npm
 const inquirer = require('inquirer');
 const fs = require('fs');
+const writeFile = require('./dist/generate-site');
+const generateWebpage = require('./dist/generateHTML');
+
+// classes
 const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -8,6 +14,12 @@ const Intern = require('./lib/intern');
 
 // set ups array to collect staff members
 var staff =[];
+
+const staffInfoWebPage = function (){
+  console.log('staffInfoWebPage fired');
+  generateWebpage(staff);
+  // writeFile(generateWebpage);
+  };
 
 // const for command line interface for user to choose staff type
 const userMenu = () => {
@@ -154,6 +166,7 @@ const engineerQuestions = () => {
 const exitProgram = () =>{
   console.log('input logged!');
   console.log(staff);
+  staffInfoWebPage();
 };
 
 const restOfStaff = async () => {
@@ -166,8 +179,8 @@ const restOfStaff = async () => {
   if (answers.employeeType ===  "Engineer"){
     engineerQuestions();
   }
-  else{
-    exitProgram
+  if (answers.employeeType ===  "Exit/Done") {
+    exitProgram();
   }
 })
 }  
@@ -245,4 +258,11 @@ function userInput(){
 
 // kicks of program when user enters node index in command line
 userInput();
-
+  // .then(staff =>{
+  //   console.log(staff);
+  //   const staffInfoWebPage = generateWebpage(staff)
+  //     fs.write('./staffPage.html', staffInfoWebPage, err => {
+  //       if (err) throw new Error(err);
+  //     });
+  //     console.log('Page created! Check out index.html in this directory to see it!');
+  // });

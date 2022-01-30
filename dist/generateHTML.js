@@ -2,8 +2,7 @@ const populateStaff = staff => {
     return `
     `
 }
-
-module.exports = generateWebpage => {
+function generateWebpage(staffData) {
 return`
   <!DOCTYPE html>
   <html lang="en">
@@ -21,11 +20,16 @@ return`
     <link rel="stylesheet" href="./style.css">
       <title>My Team</title>
   </head>
-  
+  ${staffData[0]}
   <body>
-    <header>
-    </header>
-    <main class="container my-5">
+  <header class="container-lg">
+  <section class= "row d-flex justify-content-center mt-5 " id="grad"> 
+        <div class="text-light h1 ">
+          <!-- Title -->  My Team
+        </div>
+        <section>
+</header>
+    <main id="main">
     </main>
     <footer class="container text-center py-3">
       <h3 class="text-dark">&copy;2020 by </h3>
@@ -34,4 +38,6 @@ return`
   </html>
   `;
 };
-}
+
+
+module.exports = generateWebpage;
