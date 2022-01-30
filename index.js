@@ -1,7 +1,12 @@
+// importing required packages and files
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const Employee = require('./lib/Employee');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const intern = require('./lib/intern');
 function userInput(){
+    this.staff = [] // setting up array that will be used to dynamically generate html
     console.log(`
    ||=======================================================================||
      Welcome! Please enter your Team Info - Starting with the Team's Manager 
@@ -62,10 +67,10 @@ function userInput(){
         }
       },
     ])  
-      .then
-
-
-    
+      .then(({name, id, email, officeNumber}) => {
+        this.staff.push(new Manager(name, id, email, officeNumber));
+        console.log(this.staff)
+      })
   };
 
 userInput.prototype.mainMenu = function() {
