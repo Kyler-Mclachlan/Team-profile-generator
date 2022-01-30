@@ -16,9 +16,7 @@ const Intern = require('./lib/intern');
 var staff =[];
 
 const staffInfoWebPage = function (){
-  console.log('staffInfoWebPage fired');
-  generateWebpage(staff);
-  // writeFile(generateWebpage);
+  writeFile(generateWebpage(staff));
   };
 
 // const for command line interface for user to choose staff type
@@ -92,8 +90,6 @@ const internQuestions = () => {
       ])
       .then(({name, id, email, school}) => {
         staff.push(new Intern(name, id, email, school));
-        console.log(staff)
-        console.log(name, id, email, school)
         restOfStaff()
       })
 };
@@ -156,8 +152,6 @@ const engineerQuestions = () => {
     ])
     .then(({name, id, email, github}) => {
       staff.push(new Engineer(name, id, email, github));
-      console.log(staff)
-      console.log(name, id, email, github)
       restOfStaff()
     })
 };
@@ -165,14 +159,12 @@ const engineerQuestions = () => {
 // const that logs end of program and that will eventuall kick of html creation
 const exitProgram = () =>{
   console.log('input logged!');
-  console.log(staff);
   staffInfoWebPage();
 };
 
 const restOfStaff = async () => {
   await userMenu()
 .then(answers => {
-  console.log(answers);
   if (answers.employeeType ===  "Intern"){
     internQuestions();
   }
@@ -250,7 +242,6 @@ function userInput(){
     ])
     .then (({name, id, email, officeNumber}) => {
         staff.push(new Manager(name, id, email, officeNumber));
-        console.log(staff);
         restOfStaff();
       })
 };

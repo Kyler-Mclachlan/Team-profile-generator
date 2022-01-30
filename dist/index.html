@@ -1,20 +1,4 @@
-// var topStaffDivEL = document.querySelector('#employee-section-top');
-// var bottomStaffDivEL = document.querySelector('#employee-section-bottom');
 
-const divOutline = (staffData) =>{
-    return `
-    <section class="genericDiv">
-    ${staffData[0].name}
-  </section>`;
-}
-
-const populateStaffTopRow = staff => {
-    for (i=0; i<3; i++){
-        
-    }
-}
-function generateWebpage(staffData) {
-return`
   <!DOCTYPE html>
   <html lang="en">
   
@@ -40,13 +24,12 @@ return`
         <section>
 </header>
     <main class="container-lg" id="main">
-      <section id="employee-section-top">${divOutline(staffData)}</section>
+      <section id="employee-section-top">
+    <section class="genericDiv">
+    ttest
+  </section></section>
       <section id="employee-section-bottom"></section>
     </main>
   </body>
   </html>
-  `;
-};
-
-
-module.exports = generateWebpage;
+  
