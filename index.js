@@ -6,7 +6,6 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/intern');
 
-
 // set ups array to collect staff members
 var staff =[];
 
