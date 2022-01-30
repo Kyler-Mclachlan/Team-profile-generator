@@ -2,11 +2,32 @@
 // var bottomStaffDivEL = document.querySelector('#employee-section-bottom');
 
 const divOutline = (staffData) =>{
-    return `
-    <section class="genericDiv">
-    ${staffData[0].name}
-  </section>`;
-}
+    if (staffData.length >= 4){
+        for (i=0;i<4;i++){
+            console.log(staffData); 
+            return `
+            <section class="genericDiv">
+            ${staffData[i].name}
+            ${staffData[i].id}
+            ${staffData[i].email}
+            </section>`;
+            
+        }
+    }
+    else {
+        for (i=0; i<staffData.length; i++){
+            console.log(staffData);
+            console.log(staffData[i]);
+            console.log(staffData.length); 
+            return `
+            <section class="genericDiv">
+            ${staffData[i].name}
+            ${staffData[i].id}
+            ${staffData[i].email}
+            </section>`;
+        }  
+    }
+};
 
 const populateStaffTopRow = staff => {
     for (i=0; i<3; i++){
