@@ -5,8 +5,12 @@ const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/intern');
-staff =[];
 
+
+// set ups array to collect staff members
+var staff =[];
+
+// const for command line interface for user to choose staff type
 const userMenu = () => {
   const questions = [
     {
@@ -19,6 +23,7 @@ const userMenu = () => {
   return inquirer.prompt(questions);
 };
 
+// const containing intern questions as well as callback to async menu function
 const internQuestions = () => {
       return inquirer.prompt([
         {
@@ -82,6 +87,7 @@ const internQuestions = () => {
       })
 };
 
+// const containing engineer questions as well as callback to async menu function 
 const engineerQuestions = () => {
     return inquirer.prompt([
       {
@@ -145,6 +151,7 @@ const engineerQuestions = () => {
     })
 };
 
+// const that logs end of program and that will eventuall kick of html creation
 const exitProgram = () =>{
   console.log('input logged!');
   console.log(staff);
@@ -166,6 +173,7 @@ const restOfStaff = async () => {
 })
 }  
 
+// inital function that gather manager input can kicks off other functions
 function userInput(){
     var staffSize = 0;
     console.log(`
@@ -236,21 +244,6 @@ function userInput(){
 };
 
 
-
+// kicks of program when user enters node index in command line
 userInput();
 
-
-  // engineer prompt
-      //   {
-    //     type: 'input',
-    //     name: 'github',
-    //     message: 'Please provide your github user name:',
-    //     validate: githubInput => {
-    //       if (githubInput) {
-    //         return true;
-    //       } else {
-    //         console.log('Please enter your github username!')
-    //         return false;
-    //       }
-    //     }
-    //   },
