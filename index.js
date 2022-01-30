@@ -249,11 +249,3 @@ function userInput(){
 
 // kicks of program when user enters node index in command line
 userInput();
-  // .then(staff =>{
-  //   console.log(staff);
-  //   const staffInfoWebPage = generateWebpage(staff)
-  //     fs.write('./staffPage.html', staffInfoWebPage, err => {
-  //       if (err) throw new Error(err);
-  //     });
-  //     console.log('Page created! Check out index.html in this directory to see it!');
-  // });

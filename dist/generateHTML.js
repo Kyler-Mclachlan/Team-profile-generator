@@ -1,7 +1,21 @@
 // var topStaffDivEL = document.querySelector('#employee-section-top');
 // var bottomStaffDivEL = document.querySelector('#employee-section-bottom');
 
-const divOutline = (staffData) =>{
+// const isolatingEngineers = staffData => {
+//     engineerArray = staffData.filter(staffData.role.isEqual('Engineer'))
+//     console.log(engineerArray);
+// }
+
+const managerDiv = (staffData) => {
+    return `
+    <section class="genericDiv">
+    ${staffData[i].name}
+    ${staffData[i].id}
+    ${staffData[i].email}
+    </section>`;
+}
+
+const divOutline = (staffData) => {
     if (staffData.length >= 4){
         for (i=0;i<4;i++){
             console.log(staffData); 
@@ -13,7 +27,7 @@ const divOutline = (staffData) =>{
             </section>`;
             
         }
-    }
+    } 
     else {
         for (i=0; i<staffData.length; i++){
             console.log(staffData);
