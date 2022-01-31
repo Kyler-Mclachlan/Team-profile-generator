@@ -1,7 +1,14 @@
 const isolatingEngineers = staffData => {
-    engineerArray = Object.values(staffData).filter(engineer => staffData.github = "string");
-    console.log(engineerArray);
-    console.log(staffData.hasOwnProperty(staffData.github));
+    for (i =0; i<staffData.length; i++ ){
+        
+        // console.log('found Engineer',i)
+        if (staffData[i].github = undefined);
+            console.log('found an engineer', staffData[i].github);
+        
+    }
+    // engineerArray = staffData(getElementsByClassName(Engineer));
+    console.log(staffData);
+    // console.log(staffData.hasOwnProperty(staffData.github));
 }
 
 const managerDiv = (staffData) => {
@@ -16,30 +23,20 @@ const managerDiv = (staffData) => {
 const divOutline = (staffData) => {
     if (staffData.length >= 4){
         for (i=0;i<4;i++){
-            console.log(staffData);
-            console.log(staffData[i]);
-            console.log(staffData.length);
-            isolatingEngineers("logging engineers" + staffData); 
+            isolatingEngineers(staffData); 
             return `
             <section class="genericDiv">
-            ${staffData[i].name}
-            ${staffData[i].id}
-            ${staffData[i].email}
+
             </section>`;
             
         }
     } 
     else {
         for (i=0; i<staffData.length; i++){
-            console.log(staffData);
-            console.log(staffData[i]);
-            console.log(staffData.length);
-            isolatingEngineers("logging engineers" + staffData); 
+            isolatingEngineers(staffData); 
             return `
             <section class="genericDiv">
-            ${staffData[i].name}
-            ${staffData[i].id}
-            ${staffData[i].email}
+
             </section>`;
         }  
     }
