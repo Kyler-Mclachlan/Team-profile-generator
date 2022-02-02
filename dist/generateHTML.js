@@ -4,15 +4,12 @@ const isolatingStaff = staffData => {
         console.log(staffData[i])
         // console.log('found Engineer',i)
         if (staffData[i].getRole() === 'Manager'){
-            console.log('found an Manager');
             htmlCard += managerCard(staffData[i]);
         }
         else if (staffData[i].getRole() === 'Intern'){
-            console.log('found an Intern');
             htmlCard += internCard(staffData[i]);
         }
         else if (staffData[i].getRole() === 'Engineer'){
-            console.log('found an Engineer');
             htmlCard += engineerCard(staffData[i]);
         }
     }
@@ -63,7 +60,7 @@ const internCard = (staffData) => {
     Email :<a href= "mailto: ${staffData.email}">${staffData.email}</a>
     </ul>
     <ul>
-    ID: ${staffData.id},
+    ID: ${staffData.id}
     </ul>
     <ul>
     School: ${staffData.school}
@@ -85,7 +82,7 @@ const engineerCard = (staffData) => {
     </div>
     <div class=other_info>
     <ul>
-    ${staffData.id}
+    ID: ${staffData.id}
     </ul>
     <ul>
     Email :<a href= "mailto: ${staffData.email}">${staffData.email}</a>
@@ -119,11 +116,6 @@ const divOutline = (staffData) => {
     }
 };
 
-const populateStaffTopRow = staff => {
-    for (i=0; i<3; i++){
-        
-    }
-}
 function generateWebpage(staffData) {
 return`
   <!DOCTYPE html>

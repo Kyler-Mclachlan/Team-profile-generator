@@ -27,21 +27,30 @@
 
 .genericDiv {
     flex-direction: column;
-    height: 12vw;
-    width: 17vw;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
     border: medium solid black;
     margin-right: 5vw;
     text-align: start;
+    padding: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-indent: -25px;
 }
 
 .name_id_li {
+    margin-top: 5px;
     background-color: lightblue;
-    padding-bottom: .05vw;
+    padding: auto;
     color: white;
+    font-size: larger;
+    height: fit-content;
 }
 
 .other_info {
     background-color: lightgray;
-    height: 7.5vw;
+    height: fit-content;
     text-align: start;
+    padding: auto;
 }
