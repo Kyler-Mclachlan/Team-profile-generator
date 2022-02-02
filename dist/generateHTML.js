@@ -27,7 +27,7 @@ const managerCard = (staffData) => {
     ${staffData.getName()}
     </ul>
     <ul>
-    Manager
+    ${staffData.getRole()}
     </ul>
     </div>
     <div class=other_info>
@@ -52,7 +52,7 @@ const internCard = (staffData) => {
     ${staffData.name}
     </ul>
     <ul>
-    Intern
+    ${staffData.getRole()}
     </ul>
     </div>
     <div class=other_info>
@@ -77,7 +77,7 @@ const engineerCard = (staffData) => {
     ${staffData.name}
     </ul>
     <ul>
-    Engineer
+    ${staffData.getRole()}
     </ul>
     </div>
     <div class=other_info>
