@@ -27,11 +27,11 @@
 
 .genericDiv {
     flex-direction: column;
-    justify-content: space-between;
-    height: 10vw;
-    width: 10vw;
+    height: 12vw;
+    width: 17vw;
     border: medium solid black;
     margin-right: 5vw;
+    text-align: start;
 }
 
 .name_id_li {
@@ -42,5 +42,6 @@
 
 .other_info {
     background-color: lightgray;
-    height: 5.4vw;
+    height: 7.5vw;
+    text-align: start;
 }

@@ -28,6 +28,8 @@ const managerCard = (staffData) => {
     <div class=name_id_li>
     <ul>
     ${staffData.getName()}
+    </ul>
+    <ul>
     Manager
     </ul>
     </div>
@@ -36,7 +38,7 @@ const managerCard = (staffData) => {
     ID: ${staffData.id}
     </ul>
     <ul>
-    Email :${staffData.email},
+    Email :<a href= "mailto: ${staffData.email}">${staffData.email}</a>
     </ul>
     <ul>
     Office number: ${staffData.officeNumber}
@@ -51,14 +53,19 @@ const internCard = (staffData) => {
     <div class=name_id_li>
     <ul>
     ${staffData.name}
+    </ul>
+    <ul>
     Intern
     </ul>
+    </div>
     <div class=other_info>
     <ul>
-    Email: ${staffData.email}
+    Email :<a href= "mailto: ${staffData.email}">${staffData.email}</a>
     </ul>
     <ul>
     ID: ${staffData.id},
+    </ul>
+    <ul>
     School: ${staffData.school}
     </ul>
     </div>
@@ -68,14 +75,25 @@ const internCard = (staffData) => {
 const engineerCard = (staffData) => {
     return `
     <section class="genericDiv">
+    <div class=name_id_li>
     <ul>
-    ${staffData.name},
+    ${staffData.name}
+    </ul>
+    <ul>
+    Engineer
+    </ul>
+    </div>
+    <div class=other_info>
+    <ul>
     ${staffData.id}
     </ul>
     <ul>
-    ${staffData.email},
-    ${staffData.github}
+    Email :<a href= "mailto: ${staffData.email}">${staffData.email}</a>
     </ul>
+    <ul>
+    Github :<a href="https://github.com/${staffData.github}">${staffData.github}</a>
+    </ul>
+    </div>
     </section>`;
 }
 
