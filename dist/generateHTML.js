@@ -1,22 +1,54 @@
-const isolatingEngineers = staffData => {
+const isolatingStaff = staffData => {
+    var htmlCard = ``;
     for (i =0; i<staffData.length; i++ ){
-        
+        console.log(staffData[i])
         // console.log('found Engineer',i)
-        if (staffData[i].github = undefined);
-            console.log('found an engineer', staffData[i].github);
-        
+        if (staffData[i].getRole() === 'Manager'){
+            console.log('found an Manager');
+            htmlCard += managerCard(staffData[i]);
+        }
+        else if (staffData[i].getRole() === 'Intern'){
+            console.log('found an Intern');
+            htmlCard += internCard(staffData[i]);
+        }
+        else if (staffData[i].getRole() === 'Engineer'){
+            console.log('found an Engineer');
+            htmlCard += engineerCard(staffData[i]);
+        }
     }
+    return htmlCard;
     // engineerArray = staffData(getElementsByClassName(Engineer));
     console.log(staffData);
     // console.log(staffData.hasOwnProperty(staffData.github));
 }
 
-const managerDiv = (staffData) => {
+const managerCard = (staffData) => {
     return `
     <section class="genericDiv">
-    ${staffData[i].name}
-    ${staffData[i].id}
-    ${staffData[i].email}
+    ${staffData.getName()}
+    ${staffData.id}
+    ${staffData.email}
+    ${staffData.officeNumber}
+    </section>`;
+}
+
+const internCard = (staffData) => {
+    return `
+    <section class="genericDiv">
+    ${staffData.name}
+    ${staffData.id}
+    ${staffData.email}
+    ${staffData.school}
+    </section>`;
+}
+
+const engineerCard = (staffData) => {
+    return `
+    <section class="genericDiv">
+    ${staffData.name}
+    ${staffData.id}
+    ${staffData.email}
+    ${staffData.github}
     </section>`;
 }
 
@@ -74,7 +106,7 @@ return`
         <section>
 </header>
     <main class="container-lg" id="main">
-      <section id="employee-section-top">${divOutline(staffData)}</section>
+      <section id="employee-section-top">${isolatingStaff(staffData)}</section>
       <section id="employee-section-bottom"></section>
     </main>
   </body>

@@ -242,6 +242,7 @@ function userInput(){
     ])
     .then (({name, id, email, officeNumber}) => {
         staff.push(new Manager(name, id, email, officeNumber));
+        console.log(name);
         restOfStaff();
       })
 };

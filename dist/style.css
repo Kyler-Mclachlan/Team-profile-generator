@@ -1,5 +1,5 @@
 #grad {
-    background-image: linear-gradient(to right, rgb(240, 150, 134) , rgb(236, 29, 29));
+    background-image: linear-gradient(to left, rgb(176, 240, 134) , rgb(236, 29, 126));
     height: 10vw;
     align-items: center;
   }
