@@ -15,6 +15,7 @@
     background-image: linear-gradient(to right, rgb(240, 221, 134) , rgb(29, 60, 236));
     grid-row: span;
     align-items: center;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
 }
@@ -25,7 +26,21 @@
 }
 
 .genericDiv {
+    flex-direction: column;
+    justify-content: space-between;
     height: 10vw;
     width: 10vw;
     border: medium solid black;
+    margin-right: 5vw;
+}
+
+.name_id_li {
+    background-color: lightblue;
+    padding-bottom: .05vw;
+    color: white;
+}
+
+.other_info {
+    background-color: lightgray;
+    height: 5.4vw;
 }

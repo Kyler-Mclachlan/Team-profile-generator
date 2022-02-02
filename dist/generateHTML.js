@@ -25,30 +25,57 @@ const isolatingStaff = staffData => {
 const managerCard = (staffData) => {
     return `
     <section class="genericDiv">
+    <div class=name_id_li>
+    <ul>
     ${staffData.getName()}
-    ${staffData.id}
-    ${staffData.email}
-    ${staffData.officeNumber}
+    Manager
+    </ul>
+    </div>
+    <div class=other_info>
+    <ul>
+    ID: ${staffData.id}
+    </ul>
+    <ul>
+    Email :${staffData.email},
+    </ul>
+    <ul>
+    Office number: ${staffData.officeNumber}
+    </ul>
+    </div>
     </section>`;
 }
 
 const internCard = (staffData) => {
     return `
     <section class="genericDiv">
+    <div class=name_id_li>
+    <ul>
     ${staffData.name}
-    ${staffData.id}
-    ${staffData.email}
-    ${staffData.school}
+    Intern
+    </ul>
+    <div class=other_info>
+    <ul>
+    Email: ${staffData.email}
+    </ul>
+    <ul>
+    ID: ${staffData.id},
+    School: ${staffData.school}
+    </ul>
+    </div>
     </section>`;
 }
 
 const engineerCard = (staffData) => {
     return `
     <section class="genericDiv">
-    ${staffData.name}
+    <ul>
+    ${staffData.name},
     ${staffData.id}
-    ${staffData.email}
+    </ul>
+    <ul>
+    ${staffData.email},
     ${staffData.github}
+    </ul>
     </section>`;
 }
 
