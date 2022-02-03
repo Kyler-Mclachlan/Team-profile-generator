@@ -15,7 +15,7 @@ https://github.com/Kyler-Mclachlan/Team-profile-generator
 
 # Link to Video showcasing project functionality 
 
-https://watch.screencastify.com/v/wb6SFPWFKVZtoV5JqE4I
+https://watch.screencastify.com/v/slnjIlcCQCKpIzKWXUTj
 
 # Contributors 
 
