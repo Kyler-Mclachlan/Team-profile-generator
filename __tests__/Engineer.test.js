@@ -1,9 +1,8 @@
 const Engineer = require('../lib/Engineer.js');
 
-// jest.mock('../lib/Manager.js');
 
 test('creates a Employee object', () => {
-    const engineer = new Engineer("testGithub");
+    const engineer = new Engineer('The-Engineer', 7, 'engineer@yahoo.com', 'testGithub');
     
     expect(engineer.github).toEqual(expect.any(String));
 

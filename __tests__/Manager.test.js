@@ -1,9 +1,7 @@
 const Manager = require('../lib/Manager.js');
 
-// jest.mock('../lib/Manager.js');
-
 test('creates a Employee object', () => {
-    const manager = new Manager(25);
+    const manager = new Manager('Micheal', 25, 'theoffice@nbc.com', 55);
     
     expect(manager.officeNumber).toEqual(expect.any(Number));
 
