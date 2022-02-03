@@ -3,7 +3,7 @@
 -------------------------------------------------------------------
 # Description
 
-Uhis project allows teams to quickly and easily create high quality team breakdowns using the command line. Users will enter in team info in the command line, and a HTML page will be generated when the user closes the program. This project uses NodeJs, JavaScript, Jest, and Inquirer.
+This project allows teams to quickly and easily create high quality team breakdowns using the command line. Users will enter in team info in the command line, and a HTML page will be generated when the user closes the program. This project uses NodeJs, JavaScript, Jest, and Inquirer.
 
 # Deploying
 
